@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Campus Issue Reporter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <h1>Smart Campus Issue Reporter</h1>
+        <p>Report and track problems around your campus</p>
+    </header>
+
+
+    <main>
+
+        <!-- Dashboard -->
+
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <h3>Total Issues</h3>
+                <p id="totalIssues">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Reported</h3>
+                <p id="reportedIssues">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>In Progress</h3>
+                <p id="progressIssues">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <p id="resolvedIssues">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Report Issue -->
+
+        <section class="report-section">
+
+            <h2>Report an Issue</h2>
+
+            <form id="issueForm">
+
+                <!-- Category -->
+
+                <label for="category">
+                    Issue Category
+                </label>
+
+                <select id="category" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Electrical">
+                        Electrical
+                    </option>
+
+                    <option value="Water">
+                        Water
+                    </option>
+
+                    <option value="Cleanliness">
+                        Cleanliness
+                    </option>
+
+                    <option value="Furniture">
+                        Furniture
+                    </option>
+
+                    <option value="Wi-Fi">
+                        Wi-Fi
+                    </option>
+
+                </select>
+
+
+                <!-- Location -->
+
+                <label for="location">
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Example: Block A - 2nd Floor"
+                    required
+                >
+
+
+                <!-- Priority -->
+
+                <label for="priority">
+                    Priority
+                </label>
+
+                <select id="priority" required>
+
+                    <option value="">
+                        Select Priority
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                </select>
+
+
+                <!-- Description -->
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    placeholder="Describe the issue..."
+                    required
+                ></textarea>
+
+
+                <!-- Submit -->
+
+                <button type="submit">
+                    Report Issue
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Reported Issues -->
+
+        <section class="issues-section">
+
+            <h2>Reported Issues</h2>
+
+            <div id="issueList">
+
+                <p class="empty-message">
+                    No issues reported yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
